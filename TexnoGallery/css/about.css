@@ -1,0 +1,20 @@
+#AboutUs {
+  background: white;
+  margin-bottom: 50px; }
+  #AboutUs .AboutImage {
+    margin-top: 120px; }
+  #AboutUs .hr {
+    width: 20%;
+    height: 2px;
+    color: #e7c14e;
+    background: #e7c14e; }
+  #AboutUs .About-text h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 60px;
+    font-weight: bold; }
+  #AboutUs .About-text p {
+    margin-top: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px; }
+
+/*# sourceMappingURL=about.css.map */
