@@ -7,6 +7,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AboutImage" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="Admin">
     <Key>
@@ -15,6 +16,13 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Email" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Brend">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrendImg" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Category">
     <Key>
@@ -30,6 +38,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="WorkDate" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
@@ -222,9 +231,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TexnoGalleryEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="TexnoGalleryEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AboutUs" EntityType="Self.AboutUs" />
     <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="Brend" EntityType="Self.Brend" />
     <EntitySet Name="Category" EntityType="Self.Category" />
     <EntitySet Name="Contact" EntityType="Self.Contact" />
     <EntitySet Name="ImageCategory" EntityType="Self.ImageCategory" />

@@ -172,6 +172,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -180,6 +181,9 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs">
+      <DependentUpon>db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brend.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
@@ -376,7 +380,18 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Uploads\acer.png" />
+    <Content Include="Uploads\amd.png" />
+    <Content Include="Uploads\apple.png" />
+    <Content Include="Uploads\asus.png" />
+    <Content Include="Uploads\dell.png" />
+    <Content Include="Uploads\hp.png" />
+    <Content Include="Uploads\intel.png" />
+    <Content Include="Uploads\lenovo.png" />
+    <Content Include="Uploads\monitor-1307227_1920-1024x723.jpg" />
     <Content Include="Uploads\MoonMars-FinalSub.jpg" />
+    <Content Include="Uploads\photo-1442406964439-e46ab8eff7c4.jpg" />
+    <Content Include="Uploads\samsung.png" />
     <Content Include="Uploads\thumb-1920-565172.jpg" />
     <Content Include="vendors\foldable\css\animate.min.css" />
     <Content Include="vendors\foldable\css\docs.min.css" />
@@ -420,9 +435,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Uploads\Web.config" />
+    <None Include="Uploads\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Uploads\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -336,42 +336,12 @@
     <div class="container-fluid slide-bord  mb-5 ">
         <hr>
         <div class="owl-carousel owl-theme">
-
-
-
-
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/asus.png">
-
-            </div>
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/apple.png">
-            </div>
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/dell.png">
-
-            </div>
-
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/hp.png">
-            </div>
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/amd.png">
-            </div>
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/lenovo.png">
-            </div>
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/intel.png">
-            </div>
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/acer.png">
-
-            </div>
-            <div class="item pl-5" style="width: 150px">
-                <img class="img-responsive" src="images/samsung.png">
-            </div>
-
+            @foreach (var BrendPh in Model.BrendPhoto)
+            {
+                <div class="item pl-5" style="width: 150px">
+                    <img class="img-responsive" src="~/Uploads/@BrendPh.BrendImg">
+                </div>
+            }
         </div>
     </div>
 </section>

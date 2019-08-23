@@ -16,6 +16,7 @@ namespace TexnoGallery.Models
     {
         public int Id { get; set; }
         public string Phone { get; set; }
+        public string HomePhone { get; set; }
         public string Email { get; set; }
         public string WorkDate { get; set; }
         public string Adress { get; set; }

@@ -9,29 +9,36 @@ namespace TexnoGallery.Controllers
 {
     public class HomeController : Controller
     {
-        TexnoGalleryEntities db = new TexnoGalleryEntities();
+        TexnoGalleryEntities1 db = new TexnoGalleryEntities1();
         
         public ActionResult Index()
         {
             var defaultModel = new DefaultViewModel
             {
-                SlideImage = db.Slide.ToList()
+                SlideImage = db.Slide.ToList(),
+                BrendPhoto=db.Brend.ToList()
+
+
             };
             return View(defaultModel);
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            var defaultModel = new DefaultViewModel
+            {
+                aboutTech = db.AboutUs.Find(1)
 
-            return View();
+            };
+            return View(defaultModel);
         }
-
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var defaultModel = new DefaultViewModel
+            {
+                contactTech = db.Contact.Find(1)
+            };
+            return View(defaultModel);
         }
     }
 }

@@ -12,6 +12,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AboutImage" Type="nvarchar" MaxLength="800" Nullable="false" />
         </EntityType>
         <EntityType Name="Admin">
           <Key>
@@ -20,6 +21,13 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="70" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Brend">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrendImg" Type="nvarchar" MaxLength="800" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -34,6 +42,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Phone" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="HomePhone" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="WorkDate" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Adress" Type="nvarchar" MaxLength="200" Nullable="false" />
@@ -220,6 +229,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
         <EntityContainer Name="TexnoGalleryModelStoreContainer">
           <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Brend" EntityType="Self.Brend" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ImageCategory" EntityType="Self.ImageCategory" Schema="dbo" store:Type="Tables" />
@@ -278,6 +288,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AboutImage" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Admin">
           <Key>
@@ -286,6 +297,13 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Email" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Brend">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrendImg" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -301,6 +319,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HomePhone" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="WorkDate" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
@@ -493,9 +512,10 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TexnoGalleryEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TexnoGalleryEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AboutUs" EntityType="Self.AboutUs" />
           <EntitySet Name="Admin" EntityType="Self.Admin" />
+          <EntitySet Name="Brend" EntityType="Self.Brend" />
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Contact" EntityType="Self.Contact" />
           <EntitySet Name="ImageCategory" EntityType="Self.ImageCategory" />
@@ -540,13 +560,14 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TexnoGalleryModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities">
+        <EntityContainerMapping StorageEntityContainer="TexnoGalleryModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities1">
           <EntitySetMapping Name="AboutUs">
             <EntityTypeMapping TypeName="TexnoGalleryModel.AboutUs">
               <MappingFragment StoreEntitySet="AboutUs">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AboutImage" ColumnName="AboutImage" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -556,6 +577,14 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brend">
+            <EntityTypeMapping TypeName="TexnoGalleryModel.Brend">
+              <MappingFragment StoreEntitySet="Brend">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="BrendImg" ColumnName="BrendImg" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -572,6 +601,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
               <MappingFragment StoreEntitySet="Contact">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="WorkDate" ColumnName="WorkDate" />
                 <ScalarProperty Name="Adress" ColumnName="Adress" />

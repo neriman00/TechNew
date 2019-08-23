@@ -7,6 +7,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AboutImage" Type="nvarchar" MaxLength="800" Nullable="false" />
   </EntityType>
   <EntityType Name="Admin">
     <Key>
@@ -15,6 +16,13 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Email" Type="nvarchar" MaxLength="70" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Brend">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrendImg" Type="nvarchar" MaxLength="800" />
   </EntityType>
   <EntityType Name="Category">
     <Key>
@@ -29,6 +37,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Phone" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="HomePhone" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="WorkDate" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="Adress" Type="nvarchar" MaxLength="200" Nullable="false" />
@@ -215,6 +224,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
   <EntityContainer Name="TexnoGalleryModelStoreContainer">
     <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brend" EntityType="Self.Brend" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ImageCategory" EntityType="Self.ImageCategory" Schema="dbo" store:Type="Tables" />

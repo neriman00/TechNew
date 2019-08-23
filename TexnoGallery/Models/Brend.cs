@@ -12,11 +12,9 @@ namespace TexnoGallery.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class AboutUs
+    public partial class Brend
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string AboutImage { get; set; }
+        public int id { get; set; }
+        public string BrendImg { get; set; }
     }
 }
