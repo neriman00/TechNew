@@ -54,6 +54,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="800" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -132,6 +133,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
         </EntityType>
@@ -331,6 +333,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Options">
           <Key>
@@ -404,6 +407,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_SubCategory_Category" FromRole="SubCategory" ToRole="Category" />
@@ -512,7 +516,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TexnoGalleryEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TexnoGalleryEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AboutUs" EntityType="Self.AboutUs" />
           <EntitySet Name="Admin" EntityType="Self.Admin" />
           <EntitySet Name="Brend" EntityType="Self.Brend" />
@@ -560,7 +564,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TexnoGalleryModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities1">
+        <EntityContainerMapping StorageEntityContainer="TexnoGalleryModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities">
           <EntitySetMapping Name="AboutUs">
             <EntityTypeMapping TypeName="TexnoGalleryModel.AboutUs">
               <MappingFragment StoreEntitySet="AboutUs">
@@ -614,6 +618,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -686,6 +691,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
             <EntityTypeMapping TypeName="TexnoGalleryModel.SubCategory">
               <MappingFragment StoreEntitySet="SubCategory">
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
               </MappingFragment>

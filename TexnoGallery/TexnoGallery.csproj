@@ -380,18 +380,30 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Uploads\159-1594018_lmp-mini-displayport-to-hdmi-adapter-usb-cable.png" />
     <Content Include="Uploads\acer.png" />
+    <Content Include="Uploads\amd-vs-intel.png" />
     <Content Include="Uploads\amd.png" />
     <Content Include="Uploads\apple.png" />
     <Content Include="Uploads\asus.png" />
+    <Content Include="Uploads\computer-accessories.png" />
     <Content Include="Uploads\dell.png" />
+    <Content Include="Uploads\Gaming-Computer-PNG-Photo.png" />
+    <Content Include="Uploads\hkc-hkc-at24a-64gb-nl-all-in-one-pc.png" />
     <Content Include="Uploads\hp.png" />
     <Content Include="Uploads\intel.png" />
     <Content Include="Uploads\lenovo.png" />
     <Content Include="Uploads\monitor-1307227_1920-1024x723.jpg" />
+    <Content Include="Uploads\Monitor-PNG-Image-500x472 - Copy.png" />
+    <Content Include="Uploads\Monitor-PNG-Image-500x472.png" />
     <Content Include="Uploads\MoonMars-FinalSub.jpg" />
     <Content Include="Uploads\photo-1442406964439-e46ab8eff7c4.jpg" />
+    <Content Include="Uploads\printer.png" />
+    <Content Include="Uploads\purepng.com-laptoplaptoptechnologyelectronicskeyboard-1121525119750ab9ua.png" />
     <Content Include="Uploads\samsung.png" />
+    <Content Include="Uploads\slide2.jpg" />
+    <Content Include="Uploads\slide3.jpg" />
+    <Content Include="Uploads\slide5.jpg" />
     <Content Include="Uploads\thumb-1920-565172.jpg" />
     <Content Include="vendors\foldable\css\animate.min.css" />
     <Content Include="vendors\foldable\css\docs.min.css" />
@@ -442,10 +454,11 @@
     <None Include="Uploads\Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Views\Product\Product.cshtml" />
+    <Content Include="Views\Shared\ProductCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

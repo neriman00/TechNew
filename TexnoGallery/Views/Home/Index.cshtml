@@ -25,75 +25,18 @@
 <section id="category">
     <div class="container-fluid text-center mt-5 mb-5">
         <div class="row" data-aos="fade-down">
-            <div class="col-md-6 col-sm-6 col-lg-3 text-white">
-                <div class="all-categ" style="background-image: url(images/hkc-hkc-at24a-64gb-nl-all-in-one-pc.png)">
-                    <div class="categ-content">
-                        <h2>Kompüterlər</h2>
-                        <p>Ən Son Modellər!</p>
+            @foreach (var catItem in Model.CategoryImage)
+            {
+                <div class="col-md-6 col-sm-6 col-lg-3 text-white mb-3">
+                    <div class="all-categ" style="background-image: url(../Uploads/@catItem.Image)">
+                        <div class="categ-content">
+                            <h2>@catItem.Name</h2>
+                            <p>@catItem.Description</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3 text-white">
-                <div class="all-categ" style="background-image: url(images/purepng.com-laptoplaptoptechnologyelectronicskeyboard-1121525119750ab9ua.png)">
-                    <div class="categ-content">
-                        <h2>Noutbuklar</h2>
-                        <p>Geniş Seçim İmkanı!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3">
-                <div class="all-categ text-white" style="background-image: url(images/Monitor-PNG-Image-500x472.png)">
-                    <div class="categ-content">
-                        <h2>Monitorlar</h2>
-                        <p>Yüksək Keyfiyyətdə!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3 text-white">
-                <div class="all-categ" style="background-image: url(images/computer-accessories.png)">
-                    <div class="categ-content">
-                        <h2>Aksesuarlar</h2>
-                        <p>Seçilmiş Məhsullar!</p>
-                    </div>
-                </div>
-
-            </div>
+            }
         </div>
-        <div class="row two-categ" data-aos="fade-up">
-            <div class="col-md-6 col-sm-6 col-lg-3 text-white">
-                <div class="all-categ" style="background-image: url(images/printer.png)">
-                    <div class="categ-content">
-                        <h2>Əlavə Qurğular</h2>
-                        <p>Yeni Texnologiyalar!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3 text-white">
-                <div class="all-categ" style="background-image: url(images/amd-vs-intel.png)">
-                    <div class="categ-content">
-                        <h2>Komponentlər</h2>
-                        <p>Hər İstəyə Uyğun!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3 text-white">
-                <div class="all-categ" style="background-image: url(images/159-1594018_lmp-mini-displayport-to-hdmi-adapter-usb-cable.png)">
-                    <div class="categ-content">
-                        <h2>Adapter və Çevirici</h2>
-                        <p>Her isteye uygun!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3 text-white">
-                <div class="all-categ" style="background-image: url(images/Gaming-Computer-PNG-Photo.png)">
-                    <div class="categ-content">
-                        <h2>PC Topla +</h2>
-                        <p>Seçimini Özün Et!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
 <!--End of the Category-->
@@ -101,75 +44,22 @@
 <section id="products" class="products mb-5">
     <div class="container">
         <h2>Yeni Məhsullar</h2>
-
     </div>
     <div class="container-fluid slide-bord" data-aos="fade-right">
         <hr>
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <img src="images/slide1.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/slide2.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
-                </div>
-            </div>
+        <div class="">
 
-            <div class="item">
-                <img src="images/slide5.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
+            @foreach (var ProductItem in  ViewBag.listpro)
+            {
+                <div class="item">
+                    <img src="~/Uploads/@ProductItem.Image" alt="@ProductItem.Product.Name">
+                    <div class="slide-title text-center">
+                        <h3>@ProductItem.Product.Price Azn</h3>
+                        <p>@ProductItem.Product.Name</p>    
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img src="images/a1.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/G1.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/slide1.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/slide1.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/slide1.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/slide1.jpg" alt="texno">
-                <div class="slide-title text-center">
-                    <h3>235 AZN</h3>
-                    <p>Case Thermaltake Versa H26 – ATX Mid Tower Case (CA-1J5-00M1WN-00)</p>
-                </div>
-            </div>
+            }
+
         </div>
         <hr>
     </div>

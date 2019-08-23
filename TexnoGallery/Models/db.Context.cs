@@ -13,10 +13,10 @@ namespace TexnoGallery.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TexnoGalleryEntities1 : DbContext
+    public partial class TexnoGalleryEntities : DbContext
     {
-        public TexnoGalleryEntities1()
-            : base("name=TexnoGalleryEntities1")
+        public TexnoGalleryEntities()
+            : base("name=TexnoGalleryEntities")
         {
         }
     

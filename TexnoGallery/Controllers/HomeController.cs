@@ -9,16 +9,19 @@ namespace TexnoGallery.Controllers
 {
     public class HomeController : Controller
     {
-        TexnoGalleryEntities1 db = new TexnoGalleryEntities1();
+        TexnoGalleryEntities db = new TexnoGalleryEntities();
         
         public ActionResult Index()
         {
+           Product selectedProduct = db.Product.FirstOrDefault();
+            ViewBag.listpro = db.ProductImage.Select(pr => pr.Product.Name).Distinct().ToList();
             var defaultModel = new DefaultViewModel
             {
                 SlideImage = db.Slide.ToList(),
-                BrendPhoto=db.Brend.ToList()
-
-
+                CategoryImage = db.ImageCategory.ToList(),
+                BrendPhoto = db.Brend.ToList(),
+                CategoryName = db.Category.ToList(),
+                productList = db.Product.OrderByDescending(pr => pr.Id).Take(10).ToList(),
             };
             return View(defaultModel);
         }

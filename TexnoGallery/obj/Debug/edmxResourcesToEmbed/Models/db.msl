@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="TexnoGalleryModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities1">
+  <EntityContainerMapping StorageEntityContainer="TexnoGalleryModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities">
     <EntitySetMapping Name="AboutUs">
       <EntityTypeMapping TypeName="TexnoGalleryModel.AboutUs">
         <MappingFragment StoreEntitySet="AboutUs">
@@ -54,6 +54,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -126,6 +127,7 @@
       <EntityTypeMapping TypeName="TexnoGalleryModel.SubCategory">
         <MappingFragment StoreEntitySet="SubCategory">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
         </MappingFragment>
