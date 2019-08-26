@@ -16,9 +16,14 @@ namespace TexnoGallery.Controllers
             var defaultModel = new DefaultViewModel
             {
                 CategoryName = db.Category.ToList(),
-                SubCategoryName=db.SubCategory.ToList()
+                SubCategoryName = db.SubCategory.ToList()
             };
+            return View();
+        }
+        public ActionResult PcTopla()
+        {
             return View();
         }
     }
 }
+   

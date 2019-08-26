@@ -13,8 +13,7 @@ namespace TexnoGallery.Controllers
         
         public ActionResult Index()
         {
-           Product selectedProduct = db.Product.FirstOrDefault();
-            ViewBag.listpro = db.ProductImage.Select(pr => pr.Product.Name).Distinct().ToList();
+
             var defaultModel = new DefaultViewModel
             {
                 SlideImage = db.Slide.ToList(),

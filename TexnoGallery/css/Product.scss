@@ -1,0 +1,60 @@
+.sliderr{
+    border:1px solid  rgba(134, 127, 127, 0.8);
+}
+.slider-png{
+    margin-top: 30px;
+}
+.div-text{
+    margin: 20px 0;
+}
+.slick-prev{
+    z-index: 10;
+    &:before{
+        color:#000 !important;
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f060";
+    }
+}
+.slick-next{
+    z-index: 10;
+    &:before{
+        color:#000 !important;
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f061";
+    }
+}
+
+.newarrival{
+    background: green;
+        width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+}
+
+
+.price{
+    color: #FE980F;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.cart{
+    
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left:20px;
+}
+.slider {
+    margin-top: 10px;
+
+    .bx-pager
+    {
+    img {
+        max-width: 100px;
+    }
+    }
+}
+.TableProduct{
+    margin-top: 20px;
+}
+
+  

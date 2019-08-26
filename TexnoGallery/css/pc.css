@@ -7,7 +7,19 @@
   border: none;
   background: linear-gradient(to bottom, #FEB13A, #e77f09);
   font-weight: bold; }
-
+.btnParent{
+    width:100%;
+    padding:15px;
+    background:#e77f09;
+    border:none;
+    font-size:16px;
+    color:#fff;
+    border-bottom:1px solid #ccc;
+    text-align:left;
+}
+.group i{
+float:right;
+}
 .ProText a {
   color: #2b3f6d; }
 

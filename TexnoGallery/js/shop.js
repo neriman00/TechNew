@@ -2,20 +2,35 @@ $(window).on("load",function(){
     $(".loadingAnima").hide()
 })
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+// const accIcon=[...document.querySelectorAll(".accord-icon")];
+// accIcon.forEach(function(icon){
+//   icon.addEventListener("click",function(){
+//       const PreAccIcon = document.querySelector(".panel.d-block");
+//       PreAccIcon.classList.remove("d-block");
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+//       icon.parentElement().nextElementSibling().classList.add(".d-block")
+//   });
+    
+// });
+// $(function() {
+//   $('.accord-icon').click(function(){
+//     $(this).parent().parent().next().slideToggle();
+
+//  });
+ // });
+$(".accord-icon").click(function(){
+    
+    $(".panel.panelactive").removeClass("panelactive")
+   $(this).parent().parent().next().toggleClass("panelactive")
+   
+    
+});
+
+
+
+
+
+
 $(".two-menu").click(function(){
     $(".menu-vertical").toggleClass("open");
 });

@@ -257,11 +257,14 @@
     <Content Include="css\about.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\contact.css" />
+    <Content Include="css\easyzoom.css" />
+    <Content Include="css\example.css" />
     <Content Include="css\login\common.css" />
     <Content Include="css\login\theme-03.css" />
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\owl.theme.default.min.css" />
     <Content Include="css\pc.css" />
+    <Content Include="css\Product.css" />
     <Content Include="css\shop.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
@@ -325,9 +328,11 @@
     <Content Include="images\Wallpaper Metro Exodus, E3 2018, artwork, poster, 8K, Games 488551375.jpg" />
     <Content Include="images\youtube.png" />
     <Content Include="images\youtube16.png" />
+    <Content Include="index.html" />
     <Content Include="js\about.js" />
     <Content Include="js\aos.js" />
     <Content Include="js\bootstrap.js" />
+    <Content Include="js\easyzoom.js" />
     <Content Include="js\jquery-3.3.1.js" />
     <Content Include="js\jquery.counterup.min.js" />
     <Content Include="js\jquery.min.js" />
@@ -352,16 +357,6 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="css\about.css.map" />
-    <Content Include="css\about.scss" />
-    <Content Include="css\contact.css.map" />
-    <Content Include="css\contact.scss" />
-    <Content Include="css\pc.css.map" />
-    <Content Include="css\pc.scss" />
-    <Content Include="css\shop.css.map" />
-    <Content Include="css\shop.scss" />
-    <Content Include="css\style.css.map" />
-    <Content Include="css\style.scss" />
     <EntityDeploy Include="Models\db.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>db.Designer.cs</LastGenOutput>
@@ -369,6 +364,17 @@
     <Content Include="Models\db.edmx.diagram">
       <DependentUpon>db.edmx</DependentUpon>
     </Content>
+    <Content Include="css\about.css.map" />
+    <Content Include="css\about.scss" />
+    <Content Include="css\contact.css.map" />
+    <Content Include="css\contact.scss" />
+    <Content Include="css\pc.css.map" />
+    <Content Include="css\pc.scss" />
+    <Content Include="css\Product.scss" />
+    <Content Include="css\shop.css.map" />
+    <Content Include="css\shop.scss" />
+    <Content Include="css\style.css.map" />
+    <Content Include="css\style.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -456,6 +462,7 @@
     </None>
     <Content Include="Views\Product\Product.cshtml" />
     <Content Include="Views\Shared\ProductCategory.cshtml" />
+    <Content Include="Views\Product\PcTopla.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

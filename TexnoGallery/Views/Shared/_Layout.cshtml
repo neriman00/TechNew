@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" Gallery,Noutbuklar,Pc Topla"/>
+    <meta name="description" content=" Gallery,Noutbuklar,Pc Topla" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>texno gallery</title>
     <link rel="stylesheet" href="~/css/bootstrap.css">
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="~/css/owl.carousel.css">
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
     <script src="https://kit.fontawesome.com/a5a64ef4c6.js"></script>
+    @RenderSection("mainCss", required: false)
+
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -64,7 +66,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4 col-md-4 col-xs-12">
-                        <a href="index.html"><img src="images/albaba.png" width="170px" alt="logo"></a>
+                        <a href="index.html"><img src="~/images/albaba.png" style=" width:170px " alt="logo"></a>
                     </div><!-- .site-branding -->
                     <div class="col-sm-8 col-md-6 col-xs-12 menu">
                         <nav class="navbar navbar-expand-lg pt-2">
@@ -80,7 +82,7 @@
                                         Ana Səhifə  <div class="active"></div>
                                         <span class="sr-only">(current)</span>
                                     </a>
-                                    <a class="nav-item nav-link text-white mr-4 menu-a" href="Shop.html">
+                                    <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("Product", "Product")">
                                         Məhsullar <span class="sr-only">(current)</span>
                                     </a>
                                     <a class="nav-item nav-link text-white mr-4 menu-a" href="@Url.Action("About","Home")">
@@ -108,7 +110,7 @@
             </div>
         </nav>
     </div>
-  @Html.Partial("ProductCategory")
+    @Html.Partial("ProductCategory")
     <!--#Header End-->
     @RenderBody()
     <!--Footer-->
@@ -195,6 +197,8 @@
     <script src="~/js/popper.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="~/js/bootstrap.js"></script>
+    @RenderSection("mainJS", required: false)
+
     <script src="~/js/main.js"></script>
     <script>
         AOS.init();

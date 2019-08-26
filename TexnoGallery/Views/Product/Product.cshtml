@@ -1,33 +1,144 @@
-﻿@{
-    ViewBag.Title = "Product";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-    <head>
-        <link rel="stylesheet" href="~/css/shop.css">
-
-    </head>
+﻿<head>
+    <link rel="stylesheet" href="~/css/shop.css" />
+</head>
 
 <section id="Shop">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <div class="ShopCategory" data-aos="fade-right">
-                    @foreach (var item in collection)
-                    {
-                        <button style="border-bottom:1px solid #e7c14e" class="accordion"><span><i class="fas fa-tv"></i>&nbsp; &nbsp; Komputerler</span></button>
-                    }
-                    <div class="panel">
-                        <p><a href="">hp</a></p>
-                        <p><a href="">hp</a></p>
-                        <p><a href="">hp</a></p>
-                    </div>
 
-                    <button class="accordion"><i class="fas fa-laptop-code"><span></i>&nbsp; &nbsp; Pc topla +</span></button>
+                <div class="ShopCategory" data-aos="fade-right">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-10 col-10">
+                                <a class="accordion" href="Shop.html">
+                                    <span>
+                                        <i class="fas fa-tv"></i>&nbsp; &nbsp;
+                                        Komputerler
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-2"><i class="fas fa-angle-down accord-icon"></i></div>
+                        </div>
+                        <div class="panel" id="panel">
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-10 col-10">
+                                <a class="accordion" href="Shop.html">
+                                    <span>
+                                        <i class="fas fa-laptop"></i>&nbsp;
+                                        &nbsp; Noutbuklar
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-2"><i class="fas fa-angle-down accord-icon"></i></div>
+                        </div>
+                        <div class="panel" id="panel">
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-10 col-10">
+                                <a class="accordion" href="Shop.html">
+                                    <span>
+                                        <i class="fas fa-print"></i>&nbsp;
+                                        &nbsp; Printerlər
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-2"><i class="fas fa-angle-down accord-icon"></i></div>
+                        </div>
+                        <div class="panel" id="panel">
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-10 col-10">
+                                <a class="accordion" href="Shop.html">
+                                    <span>
+                                        <i class="fas fa-headphones-alt"></i>&nbsp; &nbsp; Aksesuarlar
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-2"><i class="fas fa-angle-down accord-icon"></i></div>
+                        </div>
+                        <div class="panel" id="panel">
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-10 col-10">
+                                <a class="accordion" href="Shop.html">
+                                    <span>
+                                        <i class="fas fa-server"></i>&nbsp;
+                                        &nbsp; Əlavə Qurğular
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-2"><i class="fas fa-angle-down accord-icon"></i></div>
+                        </div>
+                        <div class="panel" id="panel">
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                            <p><a href="">hp</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+
+                        <a class="accordion" href="Shop.html">
+                            <span>
+                                <i class="fas fa-plus"></i>&nbsp; &nbsp; Pc
+                                Topla+
+                            </span>
+                        </a>
+                    </div>
+                    <br>
+                    <h3 class="mt-5 text-center pt-1" style="border-top:1px solid #ccc;">Qiymət</h3>
+                    <div class="price_range">
+                        <div class="row mr-2 ml-2 mb-5">
+                            <div class="col-md-5">
+                                <div class="from">
+                                    <input class="num" type="number" id="price_from" min="1" max="5000" value=""
+                                           placeholder="1">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <span>__</span>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="to">
+                                    <input class="num" type="number" id="price_to" min="1" max="5000" value=""
+                                           placeholder="5000">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="mt-3 text-center">İstehsalçı</h3>
+                        <div class="company ml-5 mb-5">
+                            <input type="checkbox" name="company" value="hp">Hp<br>
+                            <input type="checkbox" name="company" value="hp">Asus<br>
+                            <input type="checkbox" name="company" value="hp">Acer<br>
+                            <input type="checkbox" name="company" value="hp">Dell
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-9">
-                <div class="row" data-aos="fade-left">
+            <div class="col-md-9" data-aos="fade-left">
+                <div class="row">
                     <div class="col-md-3">
                         <div class="shopImg">
                             <img class="shop-img" src="images/41gldik51pL._SX425_.jpg" alt="">
@@ -72,11 +183,12 @@
                 </div>
 
 
-                <div class="shopDiv mt-5" data-aos="fade-left">
+                <div class="shopDiv mt-5">
                     <div class="row">
                         <div class="col-md-3">
                             <div class="shopImg">
-                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg" alt="">
+                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg"
+                                     alt="">
                                 <div class="img-text">
                                     <h6>GIGABYTE B360M-DS3H (LGA1151/Intel/Micro ATX/USB 3.1)</h6>
                                     <p>25,00 AZN</p>
@@ -86,7 +198,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="shopImg">
-                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg" alt="">
+                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg"
+                                     alt="">
                                 <div class="img-text">
                                     <h6>GIGABYTE B360M-DS3H (LGA1151/Intel/Micro ATX/USB 3.1)</h6>
                                     <p>25,00 AZN</p>
@@ -96,7 +209,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="shopImg">
-                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg" alt="">
+                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg"
+                                     alt="">
                                 <div class="img-text">
                                     <h6>GIGABYTE B360M-DS3H (LGA1151/Intel/Micro ATX/USB 3.1)</h6>
                                     <p>25,00 AZN</p>
@@ -106,7 +220,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="shopImg">
-                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg" alt="">
+                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg"
+                                     alt="">
                                 <div class="img-text">
                                     <h6>GIGABYTE B360M-DS3H (LGA1151/Intel/Micro ATX/USB 3.1)</h6>
                                     <p>25,00 AZN</p>
@@ -116,11 +231,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="shopDiv mt-5" data-aos="fade-left">
+                <div class="shopDiv mt-5">
                     <div class="row">
                         <div class="col-md-3">
                             <div class="shopImg">
-                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg" alt="">
+                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg"
+                                     alt="">
                                 <div class="img-text">
                                     <h6>GIGABYTE B360M-DS3H (LGA1151/Intel/Micro ATX/USB 3.1)</h6>
                                     <p>25,00 AZN</p>
@@ -130,7 +246,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="shopImg">
-                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg" alt="">
+                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg"
+                                     alt="">
                                 <div class="img-text">
                                     <h6>GIGABYTE B360M-DS3H (LGA1151/Intel/Micro ATX/USB 3.1)</h6>
                                     <p>25,00 AZN</p>
@@ -140,7 +257,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="shopImg">
-                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg" alt="">
+                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg"
+                                     alt="">
                                 <div class="img-text">
                                     <h6>GIGABYTE B360M-DS3H (LGA1151/Intel/Micro ATX/USB 3.1)</h6>
                                     <p>25,00 AZN</p>
@@ -150,7 +268,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="shopImg">
-                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg" alt="">
+                                <img class="shop-img" width="200" height="200" src="images/41gldik51pL._SX425_.jpg"
+                                     alt="">
                                 <div class="img-text">
                                     <h6>GIGABYTE B360M-DS3H (LGA1151/Intel/Micro ATX/USB 3.1)</h6>
                                     <p>25,00 AZN</p>
@@ -164,6 +283,3 @@
         </div>
     </div>
 </section>
-
-<script src="~/js/shop.js"></script>
-

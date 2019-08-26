@@ -14,9 +14,9 @@ body{
 }
 
 .ShopCategory{
-    background-color: #3e3d3d;
-    border: 10px solid #3e3d3d;
-    border-radius: 15px !important;
+    background-color: #fff;
+    border: 1px solid #ffc107;
+   
     button{
     font-family: 'Quicksand', sans-serif;
    box-shadow: none;
@@ -26,41 +26,43 @@ body{
 }
 
 .accordion {
-    background-color: #3e3d3d;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-    box-shadow: none;
+    float: left;
+    padding: 15px 0;
+    color: #3c3c3c;
+    font-size: 20px;
+    &:hover{
+        color: #3c3c3c;
+    }
   }
-  
-  .active, .accordion:hover {
-    background-color: #3e3d3d; 
+  .accord-icon{
+      padding: 18px 0;
+      font-size: 20px;
+      &:hover{
+      cursor: pointer;
+      }
   }
+
   
   .panel {
     padding: 0 18px;
     display: none;
-    color: white;
-    background-color: #585858ab;
+    color: #3c3c3c;
     overflow: hidden;
+    &.panelactive{
+        display: block;
+    }
     a{
-        color: white;
+        color: #3c3c3c;
     }
     p{
-        border-left:3.5px solid #e7c14e;
+        border-left:3.5px solid #ffc107;
         margin-left: 20px;
         margin-top: 10px;
         padding-left: 10px;
     }
   }
 .shopImg{
-    border:1px solid #e7c14e;
+    border:1px solid #ffc107;
     
     background: white;
     .shop-img{
@@ -83,5 +85,36 @@ body{
             color: white;
         }
     }
+    h3{
+        color: #3c3c3c;
+    }
+    &:hover{
+        box-shadow:2px 5px 10px #ccc;
+    }
+}
+
+.price_range{
+    width: 100%;
+        .num{
+            border: 1px solid #d8d8d8;
+            border-radius: 4px;
+            display: block;
+            height: 45px;
+            font-size: 15px;
+            color: #3c3c3c;
+            padding: 0 20px;
+            box-sizing: border-box;
+            width: 100%;
+            &:focus{
+                outline: #3c3c3c;
+               
+            }
+        }
+    span{
+        font-size: 20px;
+        font-weight: bold;
+        color: #3c3c3c;
+    }
+ 
 }
 
