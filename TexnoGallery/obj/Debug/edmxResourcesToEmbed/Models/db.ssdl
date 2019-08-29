@@ -9,7 +9,7 @@
     <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
     <Property Name="AboutImage" Type="nvarchar" MaxLength="800" Nullable="false" />
   </EntityType>
-  <EntityType Name="Admin">
+  <EntityType Name="AdminsTB">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -98,6 +98,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Image" Type="nvarchar" MaxLength="800" Nullable="false" />
     <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="BaseImg" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductOptions">
     <Key>
@@ -225,7 +226,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
   </Association>
   <EntityContainer Name="TexnoGalleryModelStoreContainer">
     <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdminsTB" EntityType="Self.AdminsTB" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Brend" EntityType="Self.Brend" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />

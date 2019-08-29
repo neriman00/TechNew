@@ -103,3 +103,10 @@ C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.csproj
 C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.csproj.CopyComplete
 C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.dll
 C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\obj\Debug\TexnoGallery.pdb
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\AutoMapper.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\FakeData.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.ValueTuple.dll
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\AutoMapper.pdb
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\AutoMapper.xml
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\FakeData.pdb
+C:\Users\HP\source\repos\TexnoGallery\TexnoGallery\bin\System.ValueTuple.xml

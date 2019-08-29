@@ -1,16 +1,21 @@
 ﻿@using TexnoGallery.ViewModel.Default
 @model DefaultViewModel
 
+@section mainCss{
+    <link rel="stylesheet" href="~/css/about.css">
+}
 <!-- ABOUT START -->
 <section id="AboutUs">
-    <div class="container mt-5">
-        <div class="row">
+    <div class="container mt-5 pt-3 mb-5 pb-5">
+        <div data-aos="fade-right" class="hr">
+            <hr>
+        </div>
+        <h1>@Model.aboutTech.Title</h1>
+        <div class="row mt-4">
             <div class="col-md-6">
-                <div data-aos="fade-right" class="hr"><hr></div>
                 <div class="About-text" data-aos="fade-right">
-                    <h1>@Model.aboutTech.Title</h1>
                     <p>
-                        @Model.aboutTech.Description
+                        @Html.Raw(Model.aboutTech.Description)
                     </p>
                 </div>
             </div>

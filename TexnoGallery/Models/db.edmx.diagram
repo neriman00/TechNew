@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="90f80da3400e4ccf9d0e7d4a0366d81d" Name="Diagram1">
+      <Diagram DiagramId="37b3d1c45cf8483385f59ae04e87e74c" Name="Diagram1">
         <EntityTypeShape EntityType="TexnoGalleryModel.AboutUs" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Admin" Width="1.5" PointX="2.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TexnoGalleryModel.AdminsTB" Width="1.5" PointX="2.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TexnoGalleryModel.Brend" Width="1.5" PointX="4.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TexnoGalleryModel.Category" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="TexnoGalleryModel.Contact" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TexnoGalleryModel.ImageCategory" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TexnoGalleryModel.Options" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.PcTopla" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TexnoGalleryModel.PcTopla" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="TexnoGalleryModel.Product" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TexnoGalleryModel.ProductImage" Width="1.5" PointX="7.5" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="TexnoGalleryModel.ProductOptions" Width="1.5" PointX="10.5" PointY="4.625" IsExpanded="true" />

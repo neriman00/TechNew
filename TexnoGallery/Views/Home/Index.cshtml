@@ -9,7 +9,7 @@
             @foreach (var slideItem in Model.SlideImage)
             {
                 <li>
-                    <img class="slide-img" src="~/Uploads/@slideItem.SlideImg">
+                    <img class="slide-img" src="@slideItem.SlideImg">
                 </li>
             }
 
@@ -31,7 +31,7 @@
                     <div class="all-categ" style="background-image: url(../Uploads/@catItem.Image)">
                         <div class="categ-content">
                             <h2>@catItem.Name</h2>
-                            <p>@catItem.Description</p>
+                            @Html.Raw(@catItem.Description)
                         </div>
                     </div>
                 </div>
@@ -49,15 +49,15 @@
         <hr>
         <div class="">
 
-       
-                <div class="item">
-                    <img src="" alt="">
-                    <div class="slide-title text-center">
-                        <h3> Azn</h3>
-                        <p></p>    
-                    </div>
+
+            <div class="item">
+                <img src="" alt="">
+                <div class="slide-title text-center">
+                    <h3> Azn</h3>
+                    <p></p>
                 </div>
-            
+            </div>
+
 
         </div>
         <hr>

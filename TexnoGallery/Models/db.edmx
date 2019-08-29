@@ -14,7 +14,7 @@
           <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
           <Property Name="AboutImage" Type="nvarchar" MaxLength="800" Nullable="false" />
         </EntityType>
-        <EntityType Name="Admin">
+        <EntityType Name="AdminsTB">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -103,6 +103,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Image" Type="nvarchar" MaxLength="800" Nullable="false" />
           <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="BaseImg" Type="tinyint" Nullable="false" />
         </EntityType>
         <EntityType Name="ProductOptions">
           <Key>
@@ -230,7 +231,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
         </Association>
         <EntityContainer Name="TexnoGalleryModelStoreContainer">
           <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AdminsTB" EntityType="Self.AdminsTB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Brend" EntityType="Self.Brend" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
@@ -292,7 +293,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="AboutImage" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="Admin">
+        <EntityType Name="AdminsTB">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -374,6 +375,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Image" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="BaseImg" Type="Byte" Nullable="false" />
           <NavigationProperty Name="Product" Relationship="Self.FK_ProductImage_Product" FromRole="ProductImage" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductOptions">
@@ -518,7 +520,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
         </Association>
         <EntityContainer Name="TexnoGalleryEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AboutUs" EntityType="Self.AboutUs" />
-          <EntitySet Name="Admin" EntityType="Self.Admin" />
+          <EntitySet Name="AdminsTB" EntityType="Self.AdminsTB" />
           <EntitySet Name="Brend" EntityType="Self.Brend" />
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Contact" EntityType="Self.Contact" />
@@ -575,9 +577,9 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Admin">
-            <EntityTypeMapping TypeName="TexnoGalleryModel.Admin">
-              <MappingFragment StoreEntitySet="Admin">
+          <EntitySetMapping Name="AdminsTB">
+            <EntityTypeMapping TypeName="TexnoGalleryModel.AdminsTB">
+              <MappingFragment StoreEntitySet="AdminsTB">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
@@ -657,6 +659,7 @@ warning 6002: The table/view 'TexnoGallery.dbo.OptionProduct' does not have a pr
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="BaseImg" ColumnName="BaseImg" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

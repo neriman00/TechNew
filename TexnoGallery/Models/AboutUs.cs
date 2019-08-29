@@ -11,11 +11,14 @@ namespace TexnoGallery.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web.Mvc;
+
     public partial class AboutUs
     {
         public int Id { get; set; }
         public string Title { get; set; }
+
+        [AllowHtml]
         public string Description { get; set; }
         public string AboutImage { get; set; }
     }

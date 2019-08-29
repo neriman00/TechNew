@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TexnoGallery.Models.Slide>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-center mt-3">Slide</h2>
+
+<span class="text-right mr-3 mb-5" style="font-size:15px;">
+    <a style="padding:10px 15px;background-color:brown; border-radius:5px; color:white" href=@Url.Action("Create","SlideImage")>Add a new photo</a>
+   
+</span>
+<table class="table">
+
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           <img  src="@item.SlideImg" class="img-thumbnail" style="width:25%"/>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

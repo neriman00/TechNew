@@ -26,7 +26,7 @@ namespace TexnoGallery.Models
         }
     
         public virtual DbSet<AboutUs> AboutUs { get; set; }
-        public virtual DbSet<Admin> Admin { get; set; }
+        public virtual DbSet<AdminsTB> AdminsTB { get; set; }
         public virtual DbSet<Brend> Brend { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Contact> Contact { get; set; }

@@ -9,7 +9,7 @@
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="AboutImage" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
-  <EntityType Name="Admin">
+  <EntityType Name="AdminsTB">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -91,6 +91,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Image" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="BaseImg" Type="Byte" Nullable="false" />
     <NavigationProperty Name="Product" Relationship="Self.FK_ProductImage_Product" FromRole="ProductImage" ToRole="Product" />
   </EntityType>
   <EntityType Name="ProductOptions">
@@ -235,7 +236,7 @@
   </Association>
   <EntityContainer Name="TexnoGalleryEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AboutUs" EntityType="Self.AboutUs" />
-    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="AdminsTB" EntityType="Self.AdminsTB" />
     <EntitySet Name="Brend" EntityType="Self.Brend" />
     <EntitySet Name="Category" EntityType="Self.Category" />
     <EntitySet Name="Contact" EntityType="Self.Contact" />

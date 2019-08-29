@@ -11,9 +11,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Admin">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Admin">
-        <MappingFragment StoreEntitySet="Admin">
+    <EntitySetMapping Name="AdminsTB">
+      <EntityTypeMapping TypeName="TexnoGalleryModel.AdminsTB">
+        <MappingFragment StoreEntitySet="AdminsTB">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Password" ColumnName="Password" />
@@ -93,6 +93,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="BaseImg" ColumnName="BaseImg" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

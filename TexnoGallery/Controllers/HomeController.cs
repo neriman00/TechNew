@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +10,7 @@ namespace TexnoGallery.Controllers
     public class HomeController : Controller
     {
         TexnoGalleryEntities db = new TexnoGalleryEntities();
-        
+
         public ActionResult Index()
         {
 
@@ -24,7 +24,14 @@ namespace TexnoGallery.Controllers
             };
             return View(defaultModel);
         }
-
+        public ActionResult SearchPro(string searchText)
+        {
+            var defaultModel = new DefaultViewModel
+            {
+                ProImage = db.ProductImage.Where(pr => pr.BaseImg == 1 && pr.Product.SubCategory.Name.Contains(searchText)).Take(10).ToList(),
+            };
+            return View(defaultModel);
+        }
         public ActionResult About()
         {
             var defaultModel = new DefaultViewModel
