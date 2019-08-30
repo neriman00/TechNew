@@ -13,7 +13,7 @@ namespace TexnoGallery.Areas.Admin.Controllers
 {
     public class AboutSiteController : Controller
     {
-        private TexnoGalleryEntities db = new TexnoGalleryEntities();
+        private texnoEntities db = new texnoEntities();
 
         // GET: Admin/AboutSite
         public ActionResult Index()

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TexnoGalleryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="texnoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="AboutUs">
     <Key>
       <PropertyRef Name="Id" />
@@ -51,6 +51,15 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Image" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Questions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="900" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="Options">
     <Key>
@@ -104,15 +113,6 @@
     <NavigationProperty Name="Options" Relationship="Self.FK_ProductOptions_Options" FromRole="ProductOptions" ToRole="Options" />
     <NavigationProperty Name="Product" Relationship="Self.FK_ProductOptions_Product" FromRole="ProductOptions" ToRole="Product" />
   </EntityType>
-  <EntityType Name="Questions">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Email" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Message" Type="String" MaxLength="900" FixedLength="false" Unicode="true" Nullable="false" />
-  </EntityType>
   <EntityType Name="Slide">
     <Key>
       <PropertyRef Name="Id" />
@@ -130,16 +130,6 @@
     <Property Name="CategoryId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Category" Relationship="Self.FK_SubCategory_Category" FromRole="SubCategory" ToRole="Category" />
     <NavigationProperty Name="Product" Relationship="Self.FK_Product_SubCategory" FromRole="SubCategory" ToRole="Product" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -234,22 +224,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TexnoGalleryEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="texnoEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AboutUs" EntityType="Self.AboutUs" />
     <EntitySet Name="AdminsTB" EntityType="Self.AdminsTB" />
     <EntitySet Name="Brend" EntityType="Self.Brend" />
     <EntitySet Name="Category" EntityType="Self.Category" />
     <EntitySet Name="Contact" EntityType="Self.Contact" />
     <EntitySet Name="ImageCategory" EntityType="Self.ImageCategory" />
+    <EntitySet Name="Questions" EntityType="Self.Questions" />
     <EntitySet Name="Options" EntityType="Self.Options" />
     <EntitySet Name="PcTopla" EntityType="Self.PcTopla" />
     <EntitySet Name="Product" EntityType="Self.Product" />
     <EntitySet Name="ProductImage" EntityType="Self.ProductImage" />
     <EntitySet Name="ProductOptions" EntityType="Self.ProductOptions" />
-    <EntitySet Name="Questions" EntityType="Self.Questions" />
     <EntitySet Name="Slide" EntityType="Self.Slide" />
     <EntitySet Name="SubCategory" EntityType="Self.SubCategory" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Users" EntityType="Self.Users" />
     <EntitySet Name="OptionProduct" EntityType="Self.OptionProduct" />
     <AssociationSet Name="FK_SubCategory_Category" Association="Self.FK_SubCategory_Category">

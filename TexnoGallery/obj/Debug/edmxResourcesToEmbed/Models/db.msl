@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="TexnoGalleryModelStoreContainer" CdmEntityContainer="TexnoGalleryEntities">
+  <EntityContainerMapping StorageEntityContainer="texnoModelStoreContainer" CdmEntityContainer="texnoEntities">
     <EntitySetMapping Name="AboutUs">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.AboutUs">
+      <EntityTypeMapping TypeName="texnoModel.AboutUs">
         <MappingFragment StoreEntitySet="AboutUs">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AdminsTB">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.AdminsTB">
+      <EntityTypeMapping TypeName="texnoModel.AdminsTB">
         <MappingFragment StoreEntitySet="AdminsTB">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Email" ColumnName="Email" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Brend">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Brend">
+      <EntityTypeMapping TypeName="texnoModel.Brend">
         <MappingFragment StoreEntitySet="Brend">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="BrendImg" ColumnName="BrendImg" />
@@ -29,7 +29,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Category">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Category">
+      <EntityTypeMapping TypeName="texnoModel.Category">
         <MappingFragment StoreEntitySet="Category">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -37,7 +37,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Contact">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Contact">
+      <EntityTypeMapping TypeName="texnoModel.Contact">
         <MappingFragment StoreEntitySet="Contact">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
@@ -49,7 +49,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ImageCategory">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.ImageCategory">
+      <EntityTypeMapping TypeName="texnoModel.ImageCategory">
         <MappingFragment StoreEntitySet="ImageCategory">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -58,8 +58,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="texnoModel.Questions">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Options">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Options">
+      <EntityTypeMapping TypeName="texnoModel.Options">
         <MappingFragment StoreEntitySet="Options">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -68,7 +78,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PcTopla">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.PcTopla">
+      <EntityTypeMapping TypeName="texnoModel.PcTopla">
         <MappingFragment StoreEntitySet="PcTopla">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
@@ -76,7 +86,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Product">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Product">
+      <EntityTypeMapping TypeName="texnoModel.Product">
         <MappingFragment StoreEntitySet="Product">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -88,7 +98,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProductImage">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.ProductImage">
+      <EntityTypeMapping TypeName="texnoModel.ProductImage">
         <MappingFragment StoreEntitySet="ProductImage">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Image" ColumnName="Image" />
@@ -98,7 +108,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProductOptions">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.ProductOptions">
+      <EntityTypeMapping TypeName="texnoModel.ProductOptions">
         <MappingFragment StoreEntitySet="ProductOptions">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ProductId" ColumnName="ProductId" />
@@ -106,18 +116,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Questions">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Questions">
-        <MappingFragment StoreEntitySet="Questions">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Message" ColumnName="Message" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Slide">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Slide">
+      <EntityTypeMapping TypeName="texnoModel.Slide">
         <MappingFragment StoreEntitySet="Slide">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="SlideImg" ColumnName="SlideImg" />
@@ -125,7 +125,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SubCategory">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.SubCategory">
+      <EntityTypeMapping TypeName="texnoModel.SubCategory">
         <MappingFragment StoreEntitySet="SubCategory">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
@@ -134,19 +134,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.Users">
+      <EntityTypeMapping TypeName="texnoModel.Users">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -156,7 +145,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OptionProduct">
-      <EntityTypeMapping TypeName="TexnoGalleryModel.OptionProduct">
+      <EntityTypeMapping TypeName="texnoModel.OptionProduct">
         <MappingFragment StoreEntitySet="OptionProduct">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />

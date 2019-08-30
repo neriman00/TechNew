@@ -14,7 +14,7 @@ namespace TexnoGallery.Areas.Admin.Controllers
 {
     public class SlideImageController : Controller
     {
-        private TexnoGalleryEntities db = new TexnoGalleryEntities();
+        private texnoEntities db = new texnoEntities();
 
         // GET: Admin/SlideImage
         public ActionResult Index()

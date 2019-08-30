@@ -4,30 +4,29 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="37b3d1c45cf8483385f59ae04e87e74c" Name="Diagram1">
-        <EntityTypeShape EntityType="TexnoGalleryModel.AboutUs" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.AdminsTB" Width="1.5" PointX="2.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Brend" Width="1.5" PointX="4.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Category" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Contact" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.ImageCategory" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Options" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.PcTopla" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Product" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.ProductImage" Width="1.5" PointX="7.5" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.ProductOptions" Width="1.5" PointX="10.5" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Questions" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Slide" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.SubCategory" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.Users" Width="1.5" PointX="10.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TexnoGalleryModel.OptionProduct" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
-        <AssociationConnector Association="TexnoGalleryModel.FK_SubCategory_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="TexnoGalleryModel.FK_ProductOptions_Options" ManuallyRouted="false" />
-        <AssociationConnector Association="TexnoGalleryModel.FK_PcTopla_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="TexnoGalleryModel.FK_Product_SubCategory" ManuallyRouted="false" />
-        <AssociationConnector Association="TexnoGalleryModel.FK_ProductImage_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="TexnoGalleryModel.FK_ProductOptions_Product" ManuallyRouted="false" />
+      <Diagram DiagramId="bf75f22dd1e840c48444693a0fecd0a3" Name="Diagram1">
+        <EntityTypeShape EntityType="texnoModel.AboutUs" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.AdminsTB" Width="1.5" PointX="2.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.Brend" Width="1.5" PointX="4.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.Category" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.Contact" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.ImageCategory" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.Questions" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.Options" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.PcTopla" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.Product" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.ProductImage" Width="1.5" PointX="7.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.ProductOptions" Width="1.5" PointX="10.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.Slide" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.SubCategory" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.Users" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="texnoModel.OptionProduct" Width="1.5" PointX="10.75" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="texnoModel.FK_SubCategory_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="texnoModel.FK_ProductOptions_Options" ManuallyRouted="false" />
+        <AssociationConnector Association="texnoModel.FK_PcTopla_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="texnoModel.FK_Product_SubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="texnoModel.FK_ProductImage_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="texnoModel.FK_ProductOptions_Product" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

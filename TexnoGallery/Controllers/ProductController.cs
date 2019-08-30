@@ -9,16 +9,18 @@ namespace TexnoGallery.Controllers
 {
     public class ProductController : Controller
     {
-        TexnoGalleryEntities db = new TexnoGalleryEntities();
+        texnoEntities db = new texnoEntities();
         // GET: Product
-        public ActionResult Product()
+        public ActionResult ProPage()
         {
             var defaultModel = new DefaultViewModel
             {
                 CategoryName = db.Category.ToList(),
-                SubCategoryName = db.SubCategory.ToList()
+                SubCategoryName = db.SubCategory.ToList(),
+                productList=db.Product.ToList(),
+                ProImage=db.ProductImage.Where(pr=>pr.BaseImg==1).ToList(),
             };
-            return View();
+            return View(defaultModel);
         }
         public ActionResult PcTopla()
         {

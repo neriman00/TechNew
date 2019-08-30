@@ -10,7 +10,7 @@ namespace TexnoGallery.Areas.Admin.Controllers
 {
     public class AdminAccountController : Controller
     {
-        TexnoGalleryEntities db = new TexnoGalleryEntities();
+        texnoEntities db = new texnoEntities();
         
         public ActionResult Login()
         {

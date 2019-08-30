@@ -9,7 +9,7 @@ namespace TexnoGallery.Controllers
 {
     public class HomeController : Controller
     {
-        TexnoGalleryEntities db = new TexnoGalleryEntities();
+        texnoEntities db = new texnoEntities();
 
         public ActionResult Index()
         {
@@ -20,7 +20,8 @@ namespace TexnoGallery.Controllers
                 CategoryImage = db.ImageCategory.ToList(),
                 BrendPhoto = db.Brend.ToList(),
                 CategoryName = db.Category.ToList(),
-                productList = db.Product.OrderByDescending(pr => pr.Id).Take(10).ToList(),
+                productList = db.Product.ToList(),
+                ProImage=db.ProductImage.Where(pr=>pr.BaseImg==1).ToList(),
             };
             return View(defaultModel);
         }
@@ -28,7 +29,7 @@ namespace TexnoGallery.Controllers
         {
             var defaultModel = new DefaultViewModel
             {
-                ProImage = db.ProductImage.Where(pr => pr.BaseImg == 1 && pr.Product.SubCategory.Name.Contains(searchText)).Take(10).ToList(),
+                ProImage = db.ProductImage.Where(pr => pr.BaseImg== 1 && pr.Product.SubCategory.Name.Contains(searchText)).Take(10).ToList(),
             };
             return View(defaultModel);
         }
